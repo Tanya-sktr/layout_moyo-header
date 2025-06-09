@@ -7,7 +7,7 @@ const { basicScenario } = backstop;
 const basic = {
   ...basicScenario,
   label: 'Elementary test',
-  referenceUrl: basicScenario.referenceUrl + '/moyo-header/',
+  referenceUrl: 'http://localhost:3000',
 };
 
 const config = {
@@ -32,11 +32,13 @@ const config = {
       ...basic,
       label: 'Header tag',
       selectors: ['header'],
+      delay: 500,
     },
     {
       ...basic,
       label: 'Nav tag',
       selectors: ['nav'],
+      delay: 500,
     },
     {
       ...basic,
@@ -45,12 +47,14 @@ const config = {
       selectors: ['[data-qa="hover"]'],
       hoverSelector: '[data-qa="hover"]',
       postInteractionWait: 1000,
+      delay: 500,
     },
     {
       ...basic,
       misMatchThreshold: 2,
       label: 'Link with class_is-active',
       selectors: ['a.is-active'],
+      delay: 500,
     },
   ],
 };
